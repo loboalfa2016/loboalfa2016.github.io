@@ -552,8 +552,24 @@ body {
 }
 
 /* ==========================================================================
-   6. RESPONSIVE
+   6. RESPONSIVE Y MENÚ HAMBURGUESA (FIX DEFINITIVO)
    ========================================================================== */
+.nav-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 1.8rem;
+    cursor: pointer;
+    z-index: 1100; /* Asegura que el botón quede por encima de todo */
+    padding: 0.5rem;
+    transition: var(--transition-fast);
+}
+
+.nav-toggle:hover {
+    color: var(--accent-primary);
+}
+
 @media (max-width: 900px) {
     .hero-container {
         grid-template-columns: 1fr;
@@ -568,10 +584,41 @@ body {
 }
 
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
+    .nav-toggle {
+        display: block; /* Muestra el botón en móviles */
     }
-    
+
+    .nav-actions {
+        display: none; /* Oculta botón extra en móvil */
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 60px; /* Queda justo debajo del header */
+        left: 0;
+        width: 100%;
+        background: #0a1128;
+        border-bottom: 2px solid var(--card-border);
+        padding: 2rem 1rem;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+    }
+
+    /* Clase que activa la visibilidad al hacer clic */
+    .nav-links.active {
+        display: flex !important;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+        width: 100%;
+    }
+
     .footer-container {
         flex-direction: column;
         text-align: center;

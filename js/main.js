@@ -1,4 +1,44 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+    // ==========================================
+    // 1. MENÚ HAMBURGUESA (MÓVIL)
+    // ==========================================
+    const navToggle = document.getElementById('nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+    const navLinksList = document.querySelectorAll('.nav-links a');
+
+    if (navToggle && navLinks) {
+        // Evento abrir / cerrar menú
+        navToggle.addEventListener('click', (e) => {
+            e.stopPropagation(); // Evita interferencias de eventos
+            navLinks.classList.toggle('active');
+            
+            // Alternar icono de hamburguesa (bars) a equis (xmark)
+            const icon = navToggle.querySelector('i');
+            if (icon) {
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-xmark');
+            }
+        });
+
+        // Cerrar menú al hacer clic en cualquier opción
+        navLinksList.forEach(link => {
+            link.addEventListener('click', () => {
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    const icon = navToggle.querySelector('i');
+                    if (icon) {
+                        icon.classList.add('fa-bars');
+                        icon.classList.remove('fa-xmark');
+                    }
+                }
+            });
+        });
+    }
+
+    // ==========================================
+    // 2. FORMULARIO DE CONTACTO ASÍNCRONO
+    // ==========================================
     const contactForm = document.querySelector('.contact-form');
 
     if (contactForm) {
@@ -8,7 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const submitBtn = contactForm.querySelector('.btn-submit');
             const originalBtnText = submitBtn.innerHTML;
 
-            // Cambiar estado del botón mientras envía
             submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Enviando...';
             submitBtn.disabled = true;
 
