@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emanuel | Software & Backend Developer</title>
     
-    <!-- Devicon CDN -->
+    <!-- Devicon CDN (Iconos de tecnologías) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     
-    <!-- FontAwesome CDN -->
+    <!-- FontAwesome CDN (Iconos UI generales) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Hoja de estilos personalizada -->
-    <link rel="stylesheet" href="/css/style.css">
+    <!-- Hoja de estilos personalizada (Ruta relativa para GitHub Pages) -->
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 
@@ -20,16 +20,16 @@
     <header class="navbar">
         <div class="nav-container">
             <a href="#hero" class="nav-logo">
-                <img src="/img/gemini-svg.svg" alt="Logo Emanuel Sandoval" class="logo-img">
+                <img src="./img/gemini-svg.svg" alt="Logo Emanuel Sandoval" class="logo-img">
                 <span class="logo-text"><span class="highlight">&lt;</span>Emanuel Sandoval<span class="highlight"> /&gt;</span></span>
             </a>
 
-            <!-- Botón Hamburguesa -->
+            <!-- Botón del Menú Hamburguesa (Móviles) -->
             <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">
                 <i class="fa-solid fa-bars"></i>
             </button>
             
-            <!-- Navegación con ID activado -->
+            <!-- Navegación -->
             <nav class="nav-links" id="nav-links">
                 <ul>
                     <li><a href="#hero">Inicio</a></li>
@@ -54,15 +54,17 @@
         <section id="hero" class="hero-section">
             <div class="hero-container">
                 
+                <!-- Columna 1: Foto de Perfil -->
                 <div class="hero-avatar-container">
                     <div class="avatar-wrapper">
-                        <img src="/img/Emanuel Correcto.jpg" alt="Foto de perfil de Emanuel Sandoval" class="hero-avatar">
+                        <img src="./img/Emanuel Correcto.jpg" alt="Foto de perfil de Emanuel Sandoval" class="hero-avatar">
                     </div>
                     <div class="avatar-status-badge">
                         <span class="status-dot"></span> Disponible para trabajar
                     </div>
                 </div>
 
+                <!-- Columna 2: Texto de Presentación -->
                 <div class="hero-content">
                     <span class="badge-sub">Backend & Software Developer</span>
                     <h1 class="hero-title">¡Hola! Soy <span class="highlight">Emanuel Sandoval</span></h1>
@@ -84,6 +86,7 @@
                         Busco mi primera oportunidad profesional en un equipo donde pueda desplegar mis habilidades y seguir creciendo. <strong>¡Hablemos!</strong>
                     </p>
 
+                    <!-- Badges del Hero -->
                     <div class="hero-tech-stack">
                         <span class="tech-tag"><i class="devicon-csharp-plain colored"></i> C# / .NET 10</span>
                         <span class="tech-tag"><i class="devicon-python-plain colored"></i> Python</span>
@@ -97,6 +100,7 @@
                         </span>
                     </div>
 
+                    <!-- Botones de Acción -->
                     <div class="hero-buttons">
                         <a href="#contacto" class="btn btn-primary">
                             <i class="fa-solid fa-envelope"></i> Contactar
@@ -122,6 +126,7 @@
 
             <div class="projects-grid">
 
+                <!-- PROYECTO 1 -->
                 <article class="project-card">
                     <div class="project-content">
                         <div class="project-top">
@@ -150,6 +155,7 @@
                     </div>
                 </article>
 
+                <!-- PROYECTO 2 -->
                 <article class="project-card">
                     <div class="project-content">
                         <div class="project-top">
@@ -176,6 +182,7 @@
                     </div>
                 </article>
 
+                <!-- PROYECTO 3 -->
                 <article class="project-card">
                     <div class="project-content">
                         <div class="project-top">
@@ -371,6 +378,7 @@
         </div>
     </footer>
 
-    <script src="/js/main.js"></script>
+    <!-- Script JS con Ruta Relativa -->
+    <script src="./js/main.js"></script>
 </body>
 </html>
